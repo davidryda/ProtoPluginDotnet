@@ -1,0 +1,19 @@
+[package]
+name = "dotnet_tool"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+extism-pdk = "1.4.1"
+proto_pdk = "0.32.6"
+schematic = { version = "0.19.4", default-features = false, features = ["schema"] }
+serde = { version = "1.0.228", features = ["derive"] }
+
+[features]
+default = ["wasm"]
+wasm = []
