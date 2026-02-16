@@ -2,6 +2,3 @@ dotnet = "10.0.103"
 
 [plugins.tools]
 dotnet = "file://./target/wasm32-wasip1/release/dotnet_tool.wasm"
-
-[tools.dotnet]
-include-eol-channels = false

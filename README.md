@@ -62,7 +62,7 @@ dotnet --info
 ```toml
 [tools.dotnet]
 metadata-index-url = "https://builds.dotnet.microsoft.com/dotnet/release-metadata/releases-index.json"
-include-eol-channels = false
+include-eol-channels = false # Optional: hide EOL channels
 ```
 
 ## Publish for others
@@ -70,7 +70,7 @@ include-eol-channels = false
 This repo includes a GitHub Actions workflow at `.github/workflows/release.yml`.
 
 - On pull requests and pushes to `main`, it builds the WASM artifact.
-- On tags like `v0.1.0`, it also uploads release assets:
+- On tags like `v0.1.1`, it also uploads release assets:
   - `dotnet.wasm`
 
 After creating a release tag, others can use:

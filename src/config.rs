@@ -11,7 +11,7 @@ impl Default for DotnetToolConfig {
             metadata_index_url:
                 "https://builds.dotnet.microsoft.com/dotnet/release-metadata/releases-index.json"
                     .into(),
-            include_eol_channels: false,
+            include_eol_channels: true,
         }
     }
 }
