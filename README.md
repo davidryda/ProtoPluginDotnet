@@ -39,14 +39,16 @@ target/wasm32-wasip1/release/dotnet_tool.wasm
 
 ## To use with proto locally
 
-In a projects `.prototools` file:
+In a project's `.prototools` file:
 
 ```toml
+dotnet = "10.0.103"
+
 [plugins.tools]
 dotnet = "file://./target/wasm32-wasip1/release/dotnet_tool.wasm"
-
-dotnet = "10.0.103"
 ```
+
+The version pin (`dotnet = "..."`) must be a top-level key, not inside `[plugins.tools]`.
 
 Install:
 
@@ -74,10 +76,10 @@ This repo includes a GitHub Actions workflow at `.github/workflows/release.yml`.
 After creating a release tag, others can use:
 
 ```toml
+dotnet = "10.0.103"
+
 [plugins.tools]
 dotnet = "https://github.com/<OWNER>/<REPO>/releases/download/v0.1.0/dotnet.wasm"
-
-dotnet = "10.0.103"
 ```
 
 Or with proto's GitHub locator protocol:
