@@ -45,7 +45,10 @@ pub struct SdkEntry {
 
 #[derive(Debug, Deserialize)]
 pub struct SdkFile {
+    #[serde(default)]
     pub rid: String,
+    #[serde(default)]
     pub name: String,
+    #[serde(default)]
     pub url: String,
 }
